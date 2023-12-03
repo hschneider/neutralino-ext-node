@@ -20,7 +20,7 @@ This extension adds a NodeJS backend to Neutralino with the following features:
 - Works in Window- and headless Cloud-Mode.
 - Terminates the NodeJS Runtime when the Neutralino app quits.
 
-![Neutralino Bun / NodeJS Extension](https://marketmix.com/git-assets/neutralino-ext-bun/bun-nodejs-neutralino.gif)
+![Neutralino NodeJS Extension](https://marketmix.com/git-assets/neutralino-ext-node/nodejs-neutralino-extension.gif)
 
 ## Run the demo
 The demo opens a Neutralino app. Clicking on the blue link sends a Ping to NodeJS, which replies with Pong. This illustrates the data-flow in both directions. 
@@ -106,7 +106,7 @@ if the requested function is named ping, we call the ping-function which sends a
 The **DEBUG** variable tells the NeutralinoExtension to report each event to the console. Incoming events, incoming function calls and outgoing messages are printed in different colors.
 This makes debugging easier, since you can track the data flow between Neutralino and NodeJS:
 
-![Debug Bun / NodeJS](https://marketmix.com/git-assets/neutralino-ext-bun/bun-nodejs-console-3.jpg) 
+![Debug NodeJS](https://marketmix.com/git-assets/neutralino-ext-node/nodejs-console.jpg)
 
 ## ./resources/js/main.js explained
 
@@ -130,7 +130,7 @@ The last line initializes the JavaScript part of the NodeJS extension. It's impo
 
 The **NodeExtension class** takes only 1 argument which instructs it to run in debug mode (here true). In this mode, all data from the NodeJS extension is printed to the dev-console:
 
-![Debug Meutralino](https://marketmix.com/git-assets/neutralino-ext-bun/bun-nodejs-neutralino-console.jpg)
+![Debug Meutralino](https://marketmix.com/git-assets/neutralino-ext-node/nodejs-neutralino-console.jpg)
 
 The **pingResult event handler** listens to messages with the same name, sent by sendMessage() on Node's side. 
 
