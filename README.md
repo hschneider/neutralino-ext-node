@@ -1,3 +1,6 @@
+<p align="center">
+<img src="https://marketmix.com/git-assets/neutralino-ext-node/neutralino-nodejs-header.svg" width="400px">
+</p>
 
 
 # neutralino-ext-node
