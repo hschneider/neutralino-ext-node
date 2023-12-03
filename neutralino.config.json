@@ -47,8 +47,8 @@
   "extensions": [
     {
       "id": "extNode",
-      "commandDarwin": "node ${NL_PATH}/extensions/node/main.js",
-      "commandWindows": "node ${NL_PATH}/extensions/node/main.js"
+      "commandDarwin": "node --inspect ${NL_PATH}/extensions/node/main.js",
+      "commandWindows": "node --inspect ${NL_PATH}/extensions/node/main.js"
     }
   ],
   "buildScript": {
