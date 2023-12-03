@@ -16,6 +16,7 @@ This extension adds a NodeJS backend to Neutralino with the following features:
 - All communication between Neutralino and NodeJS runs asynchronously.
 - All events are queued, so none will be missed during processing.
 - Track the data flow between Neutralino and NodeJS in realtime.
+- Use Node's integrated debugger.
 - Works in Window- and headless Cloud-Mode.
 - Terminates the NodeJS Runtime when the Neutralino app quits.
 
