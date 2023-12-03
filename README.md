@@ -4,8 +4,6 @@
 
 **A NodeJS Extension for Neutralino**
 
-
-
 This extension adds a NodeJS backend to Neutralino with the following features:
 - Requires only a few lines of code on both ends.
 - Read all events from the Neutralino app in your NodeJS code.
