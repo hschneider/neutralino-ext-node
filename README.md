@@ -154,7 +154,7 @@ Just follow these steps:
 
 ### Embed NodeJS in your macOS or Linux App
 
-The following scripts require the **Git commandline-tools** and **Python 3**. 
+The following scripts require the **[Git Commandline-Tools](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)** and **Python 3**. 
 
 To embed NodeJS with all its dependencies, enter the following commands in the terminal:
 
@@ -176,7 +176,7 @@ cd extensions/node
 
 ### Embed NodeJS in your Windows App
 
-The following scripts require the **Git commandline-tools** and **Python 3**. 
+The following scripts require the **[Git Commandline-Tools](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)** and **Python 3**. 
 
 Open an admin command prompt end enter:
 
