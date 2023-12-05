@@ -25,12 +25,10 @@ This extension adds a NodeJS backend to Neutralino with the following features:
 ## Run the demo
 The demo opens a Neutralino app. Clicking on the blue link sends a Ping to NodeJS, which replies with Pong. This illustrates the data-flow in both directions. 
 
-Before running the demo, **[NodeJS needs to be installed](https://nodejs.org/en)** on your machine. After this, install the WebSocket module:
-```bash
-npm install ws
-```
+Before running the demo, you need to install the **[embedded NodeJS Runtime.](#Embed NodeJS in your macOS or Linux App)**
 
 When including the extension in your own project, make sure that **neutralino.config.json** contains this whitelist:
+
 ```json
   "nativeAllowList": [
     "app.*",
