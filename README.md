@@ -8,6 +8,7 @@
 **A NodeJS Extension for Neutralino**
 
 This extension adds a NodeJS backend to Neutralino with the following features:
+- Embedded NodeJS with all its dependencies for macOS, Linux and Windows Apps.
 - Requires only a few lines of code on both ends.
 - Read all events from the Neutralino app in your NodeJS code.
 - Run NodeJS functions from Neutralino.
@@ -46,17 +47,6 @@ After this, run these commands in the ext-node folder:
 neu update
 neu run
 ```
-
-## Integrate into your own project
-Just follow these steps:
-- Modify **neutralino.config.json**, like mentioned in **"Run the demo"**.
-- Copy the **extensions** folder to your project.
-- Adapt the JS code in **extensions/node/main.js** to your needs.
-- Copy **resources/js/node-extension.js** to **resources/js**.
-- Add `<script src="js/node-extension.js"></script>` to your **index.html**
-- Add `const NODE = new NodeExtension(true)` to your **main.js**
-- Add **NODE.run(function_name, data) to main.js** to run NodeJS functions from Neutralino.
-- Add **event listeners to main.js**, to fetch result data from NodeJS.
 
 ## ./extensions/node/main.js explained
 
@@ -148,6 +138,67 @@ Below this link, you see
 <a id="link-quit" href="#" onclick="NODE.stop();" style="display:none">Quit</a>
 ```
 **NODE.stop()** is only required, when running Neutralino in cloud-mode. This will unload the NODE runtime gracefully.
+
+## Integrate into your own project
+
+Just follow these steps:
+
+- Modify **neutralino.config.json**, like mentioned in **"Run the demo"**.
+- Copy the **extensions** folder to your project.
+- Adapt the JS code in **extensions/node/main.js** to your needs.
+- Copy **resources/js/node-extension.js** to **resources/js**.
+- Add `<script src="js/node-extension.js"></script>` to your **index.html**
+- Add `const NODE = new NodeExtension(true)` to your **main.js**
+- Add **NODE.run(function_name, data) to main.js** to run NodeJS functions from Neutralino.
+- Add **event listeners to main.js**, to fetch result data from NodeJS.
+
+### Embed NodeJS in your macOS or Linux App
+
+The following scripts require the **Git commandline-tools** and **Python 3**. 
+
+To embed NodeJS with all its dependencies, enter the following commands in the terminal:
+
+```bash
+cd extensions/node
+./install.sh
+```
+
+This creates a complete NodeJS environment under `extensions/node/_runtime/nodejs`. 
+
+If you need to install further modules, use 
+
+```bash
+cd extensions/node
+./npm install MODULE
+```
+
+**install.sh** and **npm** can be deleted before deployment.
+
+### Embed NodeJS in your Windows App
+
+The following scripts require the **Git commandline-tools** and **Python 3**. 
+
+Open an admin command prompt end enter:
+
+```bash
+cd extensions\node
+install.cmd
+```
+
+This creates a complete NodeJS environment under `extensions\node\_runtime\nodejs-win`. 
+
+If you need to install further modules, use 
+
+```bash
+cd extensions\node
+npm.cmd install MODULE
+```
+
+**install.cmd** and **npm.cmd** can be deleted before deployment.
+
+### More about embedded NodeJS
+
+You can read more about the embedded Node environment here: [https://github.com/ekalinin/nodeenv](https://github.com/ekalinin/nodeenv)
 
 ## Classes overview
 

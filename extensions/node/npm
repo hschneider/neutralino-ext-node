@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# npm 1.0.0
+#
+# Activates NodeEnv, does the requested NPM
+# actions and deactivates NodeEnv.
+#
+# (c)2023 Harald Schneider - marketmix.com
+
+echo
+echo "Activating NodeEnv ..."
+source _runtime/nodejs/bin/activate
+echo "Running sudo npm ..."
+sudo _runtime/nodejs/bin/npm "$@" -g
+echo "Deactivating NodeEnv ..."
+deactivate_node
+echo "Done."

@@ -1,5 +1,5 @@
 
-// main.js 1.0.1
+// main.js 1.0.2
 //
 // Neutralino NodeExtension.
 //
@@ -30,4 +30,8 @@ function processAppEvent(d) {
 // Activate Extension
 //
 const ext = new NeutralinoExtension(DEBUG);
+console.log('---')
+console.log('NodeJS Version:', process.version);
+console.log('NodeJS Path:', process.execPath);
+console.log('---')
 ext.run(processAppEvent);
