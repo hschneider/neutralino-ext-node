@@ -214,7 +214,7 @@ npm.cmd install MODULE
 
 ### More about embedded NodeJS
 
-You can read more about the embedded Node environment here: [https://github.com/ekalinin/nodeenv](https://github.com/ekalinin/nodeenv)
+Embedding is based on NodeEnv by Eugene Kalinin. Thanks to Eugene for this wonderful solution. You can read more about the NodeEnv here: [https://github.com/ekalinin/nodeenv](https://github.com/ekalinin/nodeenv)
 
 ## Classes overview
 
