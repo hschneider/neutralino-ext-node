@@ -20,6 +20,12 @@ This extension adds a NodeJS backend to Neutralino with the following features:
 - Works in Window- and headless Cloud-Mode.
 - Terminates the NodeJS Runtime when the Neutralino app quits.
 
+### What this extension is not
+
+This extension does not make NodeJS transparently available in your NeutralinoJS App. You just call particular functions on a NodeJS Backend and get back the result.
+
+
+
 ![Neutralino NodeJS Extension](https://marketmix.com/git-assets/neutralino-ext-node/nodejs-neutralino-extension.gif)
 
 ## Run the demo
