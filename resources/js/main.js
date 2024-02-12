@@ -15,6 +15,13 @@ function test() {
     msg.innerHTML += "Test from Xojo ...." + '<br>';
 }
 
+// Start a long-running task.
+//
+document.getElementById('link-long-run')
+    .addEventListener('click', () => {
+        NODE.run('longRun');
+    });
+
 // Init Neutralino
 //
 Neutralino.init();

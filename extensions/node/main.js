@@ -1,12 +1,25 @@
 
-// main.js 1.0.2
+// main.js 1.0.3
 //
 // Neutralino NodeExtension.
 //
-// (c)2023 Harald Schneider - marketmix.com
+// (c)2023-2024 Harald Schneider - marketmix.com
 
 const NeutralinoExtension = require('./neutralino-extension');
 const DEBUG = true;     // Print incoming event messages to the console
+
+
+// This simulates a long-running task, reporting its progress to the frontend.
+//
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function longRun(d) {
+    for(i=0; i <= 5; i++) {
+        ext.sendMessage('pingResult', `Long-running task ${i}/5`);
+        await delay(1000);
+    }
+}
 
 function ping(d) {
     //
@@ -23,6 +36,9 @@ function processAppEvent(d) {
     if(ext.isEvent(d, 'runNode')) {
         if(d.data.function === 'ping') {
             ping(d.data.parameter);
+        }
+        if(d.data.function === 'longRun') {
+            longRun(d.data.parameter);
         }
     }
 }
