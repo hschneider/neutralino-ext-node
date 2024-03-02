@@ -6,8 +6,17 @@
 
 class NodeExtension {
     constructor(debug=false) {
-        this.version = '1.0.0';
+        this.version = '1.0.1';
         this.debug = debug;
+
+        if(NL_MODE !== 'window') {
+            window.addEventListener('beforeunload', function (e) {
+                e.preventDefault();
+                e.returnValue = '';
+                NODE.stop();
+                return '';
+            });
+        }
     }
     async run(f, p=null) {
         //

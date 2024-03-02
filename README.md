@@ -240,7 +240,7 @@ Embedding is based on NodeEnv by Eugene Kalinin. Thanks to Eugene for this wonde
 |---------------------------|------------------------------------------------------------------------------------------------|
 | NodeExtension(debug=false) | Extension class. debug: Print data flow to the dev-console.                                    |
 | async run(f, p=null)      | Call a NodeJS function. f: Function-name, p: Parameter data package as string or JSON.       |
-| async stop()              | Stop and quit the NodeJS extension and its parent app. Use this if Neutralino runs in Cloud-Mode. |
+| async stop()              | Stop and quit the NodeJS extension and its parent app. Use this if Neutralino runs in Cloud-Mode. This is called automatically, when the browser tab is closed. |
 
 ## More about Neutralino
 

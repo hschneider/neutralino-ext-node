@@ -11,7 +11,6 @@ J<!DOCTYPE html>
       <div style="margin-top:20px">
         <a href="#" onclick="NODE.run('ping', 'Neutralino says PING!');">Send PING to NodeJS</a><br>
         <a href="#" id="link-long-run">Start long-running background-task in NodeJS</a><br>
-        <a id="link-quit" href="#" onclick="NODE.stop();" style="display:none">Quit</a>
       </div>
       <div style="margin-top:20px">
         Received messages:
@@ -27,11 +26,5 @@ J<!DOCTYPE html>
     <!-- Your app's source files -->
     <script src="js/node-extension.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      if(NL_MODE === "cloud") {
-        e = document.getElementById("link-quit");
-        e.style.display = "block";
-      }
-    </script>
   </body>
 </html>
