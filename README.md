@@ -183,6 +183,7 @@ To embed NodeJS with all its dependencies, enter the following commands in the t
 ```bash
 cd extensions/node
 ./install.sh
+./npm install ws
 ```
 
 This creates a complete NodeJS environment under `extensions/node/_runtime/nodejs`. 
@@ -205,6 +206,7 @@ Open an admin command prompt end enter:
 ```bash
 cd extensions\node
 install.cmd
+npm.cmd install ws
 ```
 
 This creates a complete NodeJS environment under `extensions\node\_runtime\nodejs-win`. 
