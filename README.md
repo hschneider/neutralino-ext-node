@@ -5,7 +5,7 @@
 
 # neutralino-ext-node
 
-**A NodeJS Extension for Neutralino**
+**A NodeJS Extension for Neutralino >= 5.0.0**
 
 This extension adds a NodeJS backend to Neutralino with the following features:
 - Embedded NodeJS with all its dependencies for macOS, Linux and Windows Apps.
@@ -40,6 +40,7 @@ You can also use an existing NodeJS installation. In that case, you need to adap
     {
       "id": "extNode",
       "commandDarwin": "node --inspect ${NL_PATH}/extensions/node/main.js",
+      "commandLinux": "node --inspect ${NL_PATH}/extensions/node/main.js",
       "commandWindows": "node --inspect ${NL_PATH}/extensions/node/main.js"
     }
   ],
