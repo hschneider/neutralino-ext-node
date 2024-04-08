@@ -8,7 +8,7 @@
 echo.
 echo Activating NodeEnv ...
 set NODE_VIRTUAL_ENV=_runtime\nodejs-win
-set NODE_PATH=%NODE_VIRTUAL_ENV%\Scripts\node_modules
+set NODE_PATH=%NODE_VIRTUAL_ENV%\node_modules
 set NPM_CONFIG_PREFIX=%NODE_VIRTUAL_ENV%
 set PATH=%NODE_VIRTUAL_ENV%\Scripts;%NODE_PATH%;%NODE_PATH%\bin;%PATH%
 
