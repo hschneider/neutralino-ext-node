@@ -7,7 +7,7 @@
 class NeutralinoExtension {
      constructor(debug=false) {
 
-        this.version = '1.0.2';
+        this.version = '1.0.3';
         this.debug = debug;
 
         this.debugTermColors = true;             // Use terminal colors
@@ -88,8 +88,12 @@ class NeutralinoExtension {
             try {
                 if(self.termOnWindowClose) {
                     if(d.event === 'windowClose' || d.event === 'appClose') {
-                        // ToDo: Implement SIGTERM ?
-                        // Looks like the current Node release quits properly.
+                        try {
+                            let pid = process.pid;
+                            process.kill(pid, 'SIGHUP');
+                            return;
+                        }
+                        catch (e) {}
                         return;
                     }
                 }
