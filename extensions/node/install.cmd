@@ -1,4 +1,4 @@
-:: Embeddable NodeJS installer 1.0.2
+:: Embeddable NodeJS installer 1.0.3
 ::
 :: Installs an embeddable NodeJS version.
 ::
@@ -6,7 +6,7 @@
 :: - python3
 :: - git
 ::
-:: (c)2023-2024 Harald Schneider - marketmix.com
+:: (c)2023-2026 Harald Schneider - marketmix.com
 
 @echo off
 
@@ -18,7 +18,7 @@ pip3 install -e git+https://github.com/ekalinin/nodeenv.git#egg=nodeenv
 
 echo.
 echo Installing ...
-python3 src/nodeenv/nodeenv.py nodejs-win
+python src/nodeenv/nodeenv.py nodejs-win
 
 echo.
 echo Cleaning ...
